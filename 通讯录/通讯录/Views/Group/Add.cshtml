@@ -1,0 +1,42 @@
+﻿@model Group
+@using 通讯录.Models
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">分组信息添加</h3>
+        </div>
+        <iv class="panel-body">
+            <form class="form-horizontal" role="form" method="post">
+                <div class="form-group">
+                    <label for="firstname" class="col-sm-2 control-label">分组编号</label>
+                    <div class="col-sm-10">
+                        @Html.TextBoxFor(u => u.GroupId, new { @class = "form-control", placeholder = "请输入分组编号" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">分组名称</label>
+                    <div class="col-sm-10">
+                        @Html.TextBoxFor(u => u.GroupName, new { @class = "form-control", placeholder = "请输入分组名称" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">备注</label>
+                    <div class="col-sm-10">
+                        @Html.TextAreaFor(u => u.Remarks, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">添加</button>
+                    </div>
+                </div>
+            </form>
+    </div>
+</div>
+</div>
+
+
